@@ -41,7 +41,13 @@
     import TemplateRefComponent from "./components/TemplateRefComponent.js"
     import ComponentBasicComponent from "./components/ComponentBasicComponent.js"
     import ComponentInDepthComponent from "./components/component-in-depth/Base.js"
+    import Registration from "./components/component-in-depth/Registration.js"
 
-    createApp(ComponentInDepthComponent).mount('#app')
+    const app = createApp(ComponentInDepthComponent);
+
+    // Global Component Registration
+    app.component('GlobalRegistration', Registration);
+
+    app.mount('#app');
   </script>
 </html>
