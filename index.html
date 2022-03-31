@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Vue3JS without SFCs</title>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+        }
+      }
+    </script>
+
+    <style>
+      [contenteditable="true"] {
+        outline: none;
+      }
+
+      [contenteditable="false"] {
+        background: darkgrey;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">{{ message }}</div>
+  </body>
+
+  <script type="module">
+    import { createApp } from "vue";
+    import MyComponent from "./components/MyComponent.js";
+    import ComputedComponent from "./components/ComputedComponent.js"
+    import ClassAndStyleBindingComponent from "./components/ClassAndStyleBindingComponent.js"
+    import ConditionalComponent from "./components/ConditionalComponent.js"
+    import ListComponent from "./components/ListComponent.js"
+    import EventHandlingComponent from "./components/EventHandlingComponent.js"
+    import FormInputComponent from "./components/FormInputComponent.js"
+    import WatcherComponent from "./components/WatcherComponent.js"
+    import TemplateRefComponent from "./components/TemplateRefComponent.js"
+
+    createApp(TemplateRefComponent).mount('#app')
+  </script>
+</html>
